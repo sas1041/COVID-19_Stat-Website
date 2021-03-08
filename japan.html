@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        .flex-container {
+        display: flex;
+        background-color: red;
+      }
+      
+      .flex-container > div {
+        background-color: #000000;
+        margin: 10px;
+        padding: 20px;
+        font-size: 50px;
+      }
+      img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1 {text-align: center;}
+    </style>
     <title>COVID-19 Info</title>
     <meta charset="UTF-8">
     <meta name="description" content="COVID-19 Information and Statistics">
@@ -22,12 +41,18 @@
                 </div>
             </ul>
             <h1>Japan</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" alt="Japan" style="width:10%;">
         </div>
+        <h1> Population: 123.6 Million - Average Age: 48.8 </h1>
+        <br />
         <div id="content">
-            <h2>Statistics</h2>
-            <p>COVID-19 Cases:</p>
-            <p>COVID-19 Deaths:</p>
+           <div class="flex-container">
+                   <div>COVID-19 Cases:<hr></div>
+                   <div>COVID-19 Deaths:<hr></div>
+                   <div>Currently under Lockdown?<hr></div>
+                   </div>
         </div>
+        <p><i>Data is subject to change. Last updated 3/8/2021.</i></p>
     </div>
     <script src="./vendor/jquery-3.4.1.min.js"></script>
     <script src="./vendor/jquery-ui/jquery-ui.min.js"></script>
