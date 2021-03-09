@@ -8,6 +8,14 @@ body {
     background-size: cover;
 }
 
+.dropdown ul li {
+    display: none;
+}
+
+.dropdown:hover ul li {
+    display: block;
+}
+
 #wrapper {
     margin-left: 10%;
     margin-right: 10%;
