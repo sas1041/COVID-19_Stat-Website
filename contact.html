@@ -12,46 +12,61 @@
 </head>
 <body>
     <div id="wrapper">
-        <div id="header">
-            <ul> <!--Navbar-->
-                <li><a href="index.html">Home</a></li>
-                <li><a href="safety.html">Safety Guide</a></li>
-                <li><a href="calc.html">COVID Calculator</a></li>
-                <li><a href="contact.html">Contact</a></li>
+        <header>
+            <div id="nav"> <!--Navbar-->
+                <a href="index.html">Home</a>
+                <a href="safety.html">Safety Guide</a><
+                <a href="calc.html">COVID Calculator</a>
+                <a href="contact.html">Contact</a>
                 <div class="dropdown">
-                    <li><a href="">Other Countries &#8594;</a></li>
-                        <ul>
-                            <li><a href="china.html" target="_blank">China</a></li>
-                            <li><a href="japan.html" target="_blank">Japan</a></li>
-                            <li><a href="russia.html" target="_blank">Russia</a></li>
-                            <li><a href="uk.html" target="_blank">United Kingdom</a></li>
-                        </ul>
+                    <button class="dropbtn">Other Countries &#8594;</button>
+                    <div class="dropdown-content">
+                        <a href="china.html">China</a>
+                        <a href="japan.html">Japan</a>
+                        <a href="russia.html">Russia</a>
+                        <a href="uk.html">United Kingdom</a>
+                    </div>
                 </div>
-            </ul>
+            </div>
             <h1>Key Contributor's Contact Information</h1>
-        </div>
+        </header>
         <div id="content">
-        <h2>Shane Smith</h2>
-            <ul>
-                <li>School: Slippery Rock University</li>
-                <li>Majors: Computer Science and Cybersecurity</li>
-                <li>Email: <a href="mailto:sas1041@sru.edu">sas1041@sru.edu</a></li>
-            </ul>
-        <h2>Matthew Mowry</h2>
-            <ul>
-                <li>School: Slippery Rock University</li>
-                <li>Majors: CyberSecurity: Security Governance. </li>
-                <li>Email: <a href="mailto:mmm1053@sru.edu">mmm1053@sru.edu</a></li>
-            </ul>
-        <h2>Scott Hardy</h2>
-            <ul>
-                <li>School: Slippery Rock University</li>
-                <li>Majors: Computer Science</li>
-                <li>Email: <a href="mailto:sdh1007@sru.edu">sdh1007@sru.edu</a></li>
-            </ul>
+            <div class="personInfo">
+                <h2>Shane Smith</h2>
+                <ul>
+                    <li>School: Slippery Rock University</li>
+                    <li>Major(s): Cybersecurity and Computing</li>
+                    <li>Concentration(s): Secure Software Development and Computer Science</li>
+                    <li>Email: <a href="mailto:sas1041@sru.edu">sas1041@sru.edu</a></li>
+                </ul>
+            </div>
+
+            <div class="personInfo">
+                <h2>Matthew Mowry</h2>
+                <ul>
+                    <li>School: Slippery Rock University</li>
+                    <li>Majors(s): Cybersecurity </li>
+                    <li>Concentration(s): Security Governance</li>
+                    <li>Email: <a href="mailto:mmm1053@sru.edu">mmm1053@sru.edu</a></li>
+                </ul>
+            </div>
+            
+            <div class="personInfo">
+                <h2>Scott Hardy</h2>
+                <ul>
+                    <li>School: Slippery Rock University</li>
+                    <li>Major(s): Computing</li>
+                    <li>Concentration(s): Computer Science</li>
+                    <li>Email: <a href="mailto:sdh1007@sru.edu">sdh1007@sru.edu</a></li>
+                </ul>
+            </div>
+            
         </div>
+        <footer>
+            <i>NOTICE: This website serves as a resource for COVID-19 and related information. All information has last been modifed on 2/8/2021.</i>
+        </footer>
     </div>
-    <script src="./vendor/jquery-3.4.1.min.js"></script>
+    <script src="./vendor/jquery-3.5.1.min.js"></script>
     <script src="./vendor/jquery-ui/jquery-ui.min.js"></script>
 </body>
 </html>
