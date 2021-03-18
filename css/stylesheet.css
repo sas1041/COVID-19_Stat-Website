@@ -1,3 +1,4 @@
+/* ---------------------------- General Site CSS ------------------------ */
 body {
     font-family: 'Times New Roman', Times, serif;
     color: white;
@@ -15,14 +16,21 @@ body {
     padding: 5px;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #ff0000;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header h1 {
     text-align: center;
 }
 
+/* --------------------------- NAV -------------------------------- */
 #nav {
     overflow: hidden;
     background-color: #333;
@@ -75,10 +83,28 @@ header h1 {
     visibility: visible;
 }
 
-#content p, #content h2{
+/* ---------------------- Body Content CSS ----------------------- */
+#content p, #content h2 {
     text-align: center;
 }
 
+/* ----- Contact.html css ----- */
+.personInfo {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.personInfo > * {
+    width: 45%;
+}
+.personInfo ul {
+    list-style-type: none;
+    justify-content: center;
+}
+
+/* ----- Calc.html css ------ */
 #calc {
     display: flex;
     flex-flow: row wrap;
@@ -105,15 +131,12 @@ header h1 {
     width: 45%;
 }
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+/* ------ safety.html css -------- */
 #safety {
     width: 50%;
 }
 
+/* ------ country pages css ------- */
 #covidBox {
     display: flex;
     background-color: red;
@@ -129,6 +152,7 @@ img {
     margin-top: 5px;
 }
 
+/* ----------------------------- Footer -------------------------- */
 footer {
     margin-top: 20px;
     text-align: center;
