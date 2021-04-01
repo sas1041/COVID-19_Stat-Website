@@ -31,6 +31,10 @@ header h1 {
     text-align: center;
 }
 
+#content {
+    padding: 0 2em ;
+}
+
 /* --------------------------- NAV -------------------------------- */
 #nav {
     overflow: hidden;
@@ -104,6 +108,12 @@ header h1 {
     list-style-type: none;
     justify-content: center;
     padding-left: 0;
+}
+.personInfo a:link {
+    color: white;
+}
+.personInfo a:hover {
+    text-decoration: none;
 }
 
 /* ----- Calc.html css ------ */
