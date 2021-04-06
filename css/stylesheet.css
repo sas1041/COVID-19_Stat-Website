@@ -93,6 +93,52 @@ header h1 {
     text-align: center;
 }
 
+/* ------ Index SVG CSS ------- */
+.state { /* default color for all states */
+    fill:#D0D0D0;
+}                        
+.borders { /* color and width of borders between states */
+    stroke:#FFFFFF; stroke-width: 1;
+}                  
+.separator1 { /* color and width of lines around Alaska and Hawaii */
+    stroke:#B0B0B0; stroke-width: 2;
+} 
+#us-map {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.state path:hover, .state circle:hover {
+    stroke: #ff0000 !important;
+    stroke-width:2px;
+    stroke-linejoin: round;
+    fill: #ff0000 !important;
+    cursor: pointer;
+}
+/* Popup box to display state covid info */
+#info-box { 
+    display: none;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: fixed;
+    z-index: 1;
+}
+/* Popup arrow */
+#info-box::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
 /* ----- Contact.html css ----- */
 #contactBody {
     display: flex;
@@ -169,3 +215,11 @@ footer {
     margin-top: 20px;
     text-align: center;
 }
+
+
+/*@media (max-width: 1350px) {
+    #us-map {
+        width: 500px;
+        height: 200px;
+    }
+}*/
