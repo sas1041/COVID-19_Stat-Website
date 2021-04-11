@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="script.js"></script>
+	
     <style>
     </style>
     <title>COVID-19 Safety Guide</title>
@@ -35,8 +37,11 @@
             <h2>Protect yourself and REMEMBER YOUR ACTONS HAVE CONSEQUENCES FOR OTHERS.</h2>
             <div>
                 <p>Stay inside and limit travel that would expose you to large groups of people. Exposure to groups larger than 5 can <b>drastically</b> increase the possbilities of transmission.</p>
-                <p>Masks and face sheilding can reduce the likelyhood of transmissions of the virus. The correct way to wear a mask is shown below:</p>
-                <img id="safety" src="images/maskdosdonts-700.jpg" alt="mask">
+                <p>Masks and face sheilding can reduce the likelyhood of transmissions of the virus. The correct way to wear a mask is shown below:</p>	
+				<div class="container">
+                <img id="safety" src="images/maskdosdonts-700.jpg" alt="mask" class="image">
+				 <div class="overlay">Masks should be worn snugly over your mouth and nose. </div>
+				 </div>
                 <p><b> REMEMBER MASKS DO NOT 100% GUARNTEE YOUR SAFTEY BUT IN COMBINATION WITH SOCIAL DISTANCING CAN REDUCE 
                     THE PORBABILITY OF INFECTION.</b> <a href="https://reliantmedicalgroup.org/blog/2020/07/14/medical-mythbuster-masks-are-100-effective-in-preventing-the-spread-of-covid-19/">Source</a>.</p>  
             </div>
@@ -44,18 +49,16 @@
 
             <div>
                 <h2>General lifestyle saftey advice:</h2>
-                <p>Stay at home when possible. Remember to stay in regular contact with friends and family in order to avoid unwanted physcological strain due to isolation.</p>
-                <p> Designate one family memeber to run erannds and cordinate obligations outside the household. The designated family member should be at <a href="calc.html">low risk</a>.</p>
+                <p>While the pandemic rages life carries on so to ensure good mental and physical health follow these tipes<span id="dots2">...</span><span id="more2">Stay at home when possible. Remember to stay in regular contact with friends and family in order to avoid unwanted physcological strain due to isolation. <span id="dots2">...</span><span id="more2"> Designate one family memeber to run erannds and cordinate obligations outside the household. The designated family member should be at low risk.</span></p> 
+				 <h2><button onclick="secondBtn()" id="secBtn">Read More</button></h2>
             </div>
             <br />
 
             <div>
                 <h2>What to do if someone ignores or downplays saftey protocol?</h2>
-                <uL>
-                    <li>Do not approach or confront them. <b>Reason:</b> A possbile confrontation with a <u>unmasked</u> or <u>non social distancing person</u> drastically increases the likelyhood of transmission of the Virus.</li>
-                    <li>Avoid interactions and inform appropriate authorities if they are compromising your ability to function safely.</li>
-                    <li>Encourage safe habits and hygenie within your family and community while maintaining your own saftey.<b>Reason:</b> We must all do our part.</li>
-                </uL>
+				<p> Not everyone uderstands the impacts and hazards posed by not follwoing daftey guidlines. Here are some tips when dealing with noncompliant individuals<span id="dots">...</span><span id="more">Read more</button>Do not approach or confront them. A possbile confrontation with a <u>unmasked</u> or <u>non social distancing person</u> drastically increases the likelyhood of transmission of the Virus. Avoid interactions and inform appropriate authorities if they are compromising your ability to function safely. Encourage safe habits and hygenie within your family and community while maintaining your own saftey.<b>Reason:</b> We must all do our part.</span></p> 
+             <h2><button onclick="firstBtn()" id="firBtn">Read More</button></h2>
+                
             </div>
         </div>
         <footer>
