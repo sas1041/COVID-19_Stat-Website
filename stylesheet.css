@@ -301,6 +301,31 @@ html {
   padding: 20px;
   text-align: center;
 }
+/*Displays travel information onmouse over flag */
+.hide {
+  display: none;
+}
+
+.imgJapan:hover + .hide {
+  display: block;
+  color: red;
+}
+
+.imgChina:hover + .hide {
+  display: block;
+  color: red;
+}
+
+.imgRussia:hover + .hide {
+  display: block;
+  color: red;
+}
+
+.imgUK:hover + .hide {
+  display: block;
+  color: red;
+}
+
 
 
 /* ----------------------------- Footer -------------------------- */
