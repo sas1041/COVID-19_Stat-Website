@@ -36,8 +36,21 @@ function setPopup(e) {
 // Shows popup
 function showPopup() {
     var popup = document.getElementById("info-box");
+    var element = document.createElement("div");
 
-    popup.innerHTML = this.dataset.info;
+    var state = document.createElement("h4").appendChild(document.createTextNode(this.dataset.info));
+    element.appendChild(state);
+    element.appendChild(document.createElement("br"));
+
+    var covidCases = document.createElement("h4").appendChild(document.createTextNode("Covid Cases: ..."));
+    element.appendChild(covidCases);
+    element.appendChild(document.createElement("br"))
+
+    var covidDeaths = document.createElement("h4").appendChild(document.createTextNode("Covid Deaths: ..."));
+    element.appendChild(covidDeaths);
+    element.appendChild(document.createElement("br"))
+
+    popup.appendChild(element);
     popup.style.display = "block"
 }
 
