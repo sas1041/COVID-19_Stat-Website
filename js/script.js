@@ -121,71 +121,62 @@ function age() {
     document.getElementById("age");
     if (age <= 18)
     {
-        risk += 0.5;
+        return 0.5;
     }
     else if (age > 18 || age <= 39)
     {
-        risk += 2;
+        retrun 2;
     }
     else if (age > 39 || age <= 65)
     {
-        risk += 2;
+        return 2;
     }
     else if (age > 65)
     {
-        risk += 3;
+        return 3;
     }
 };
 
-
-// Adds 2 or 3, depending on if User is overweight or obese
 function bmi() {
     document.getElementById("weight");
     document.getElementById("height");
     var bmi = (weight/heightMath.pow(2)) * 703;
     if (bmi > 30)
     {
-        risk += 3; // obese
+        return 3;
     }
     else if (bmi > 25 && bmi < 29.9)
     {
-        risk += 2; // overweight
+        return 2;
     }
 };
 
-
-// Adds 2 to risk if User has Symptoms
 function symptoms() {
     if(document.getElementById("symptomYes").checked)
     {
-        risk += 2;
+        return 2;
     }
 };
 
-
-// Adds 5 to risk if User has been in contact with someone who's had COVID
 function contact() {
     if(document.getElementById("contactYes").checked)
     {
-        risk +=5;
+        return 5;
     }
 };
 
-
-// Adds 1 to Risk if User has Traveled
 function travel() {
     if(document.getElementById("outsideYes").checked)
     {
-        risk += 1;
+        return 1;
     }
 };
 
-
-// Lets User Knows Their Risk
-function caclculateRisk() {
-    var result = document.getElementById("result");
+function caclculate() {
+    var result = document.getElementById("calcResult");
     var risk = travel() + contact() + symptoms() + bmi() + age();
- 
+
+
     if (risk < 5)
     {
         result.innerHTML("Based on our calculations, you most likely don't have COVID-19. Still stay cautious with who you come in contact with.");
