@@ -160,7 +160,7 @@ function bmi() {
 };
 
 function symptoms() {
-    if(document.getElementById("symptomYes").checked)
+    if(document.getElementById("symptomsYes").checked)
     {
         return 2;
     }
@@ -195,7 +195,6 @@ function travel() {
 function calculateRisk() {
     var result = document.getElementById("calcResult");
     var risk = travel() + contact() + symptoms() + bmi() + age();
-
 
     if (risk < 5)
     {
