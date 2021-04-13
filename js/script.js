@@ -183,7 +183,7 @@ function travel() {
 
 // Lets User Knows Their Risk
 function caclculateRisk() {
-    var risk = document.getElementById("span");
+    var risk = document.getElementById("risk");
 
 
     if (risk < 5)
