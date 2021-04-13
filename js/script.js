@@ -183,19 +183,19 @@ function travel() {
 
 // Lets User Knows Their Risk
 function caclculateRisk() {
-    var risk = document.getElementById("risk");
-
-
+    var result = document.getElementById("result");
+    var risk = travel() + contact() + symptoms() + bmi() + age();
+ 
     if (risk < 5)
     {
-        risk.innerHTML("Based on our calculations, you most likely don't have COVID-19. Still stay cautious with who you come in contact with.");
+        result.innerHTML("Based on our calculations, you most likely don't have COVID-19. Still stay cautious with who you come in contact with.");
     }
     else if(risk > 5 && risk < 10)
     {
-        risk.innerHTML("Based on our calculations, you should be careful with who you come in contact with because there's a decent chance you have it.");
+        result.innerHTML("Based on our calculations, you should be careful with who you come in contact with because there's a decent chance you have it.");
     }
     else if(risk >= 10)
     {
-        risk.innerHTML("Based on our calculations, you are at great risk for having COVID-19. Stay quarantined.");
+        result.innerHTML("Based on our calculations, you are at great risk for having COVID-19. Stay quarantined.");
     }
 };
