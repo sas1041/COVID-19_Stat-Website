@@ -21,6 +21,10 @@ window.onload = function() {
     if (path == "russia.html" || path == "japan.html" || path == "china.html" || path == "uk.html"){
         $("travelBtn").onclick = showTravel;
     }
+    
+    if(path == "calc.html"){
+        document.getElementById("formButton").onclick = calculateRisk;
+    };
 };
 
 // Set position of popup slightly above client cursor y value
@@ -178,7 +182,7 @@ function travel() {
 
 
 // Lets User Knows Their Risk
-function caclculate() {
+function caclculateRisk() {
     var risk = document.getElementById("span");
 
 
