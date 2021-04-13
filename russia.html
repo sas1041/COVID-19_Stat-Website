@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="description" content="COVID-19 Information and Statistics">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./vendor/jquery-ui/jquery-ui.min.css">
     <link rel="icon" type="image/gif" href="images/favicon.gif"/>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <script type="text/javascript" src ="./js/prototype.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -18,7 +19,7 @@
                 <a href="calc.html">COVID Calculator</a>
                 <a href="contact.html">Contact</a>
                 <div class="dropdown">
-                    <button class="dropbtn">Dropdown &#8594;</button>
+                    <button class="dropbtn">Other Countries &#8594;</button>
                     <div class="dropdown-content">
                         <a href="china.html">China</a>
                         <a href="japan.html">Japan</a>
@@ -29,10 +30,14 @@
             </div>
             <h1>Russian Federation</h1>
 			<div class="imgRussia">	
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png" alt="Japan" style="width:10%;">
-            <h2> Population: 144.4 Million - Average Age: 40.2 </h2>
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png" alt="Japan" style="width:10%;">
+                <h2> Population: 144.4 Million - Average Age: 40.2 </h2>
 			</div>
-			<div class="hide"><h2>Travel is extremely discouraged as to prevent variant transmission.</h2></div>
+            <div id="travel">
+                <button id="travelBtn" class="button">Show Travel Information</button>
+                <h2 id="travelInfo" class="hide">Travel is extremely discouraged as to prevent variant transmission.</h2>
+                <br>
+            </div>
         </header>
         <div id="content">
             <div id="covidBox">
@@ -55,8 +60,7 @@
         </div>
         <footer>
             <i>NOTICE: This website serves as a resource for COVID-19 and related information. Last updated 3/8/2021. WARNING: Chinese Data may or may not reflect reality.</i>
-        </footer>    </div>
-    <!--<script src="./vendor/jquery-3.5.1.min.js"></script>-->
-    <!--<script src="./vendor/jquery-ui/jquery-ui.min.js"></script>-->
+        </footer>    
+    </div>
 </body>
 </html>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="script.js"></script>
     <title>Japan COVID-19 Info</title>
     <meta charset="UTF-8">
     <meta name="description" content="COVID-19 Information and Statistics">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./vendor/jquery-ui/jquery-ui.min.css">
     <link rel="icon" type="image/gif" href="images/favicon.gif"/>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <script type="text/javascript" src ="./js/prototype.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -29,11 +29,15 @@
                 </div>
             </div>
             <h1>Japan</h1>
-<div class="imgJapan">			
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" alt="Japan" style="width:10%;">
-            <h2> Population: 123.6 Million - Average Age: 48.8 </h2>
+            <div class="imgJapan">			
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" alt="Japan" style="width:10%;">
+                <h2> Population: 123.6 Million - Average Age: 48.8 </h2>
 			</div>
-			<div class="hide"><h2>Immigration and visitation by foreigners is extremely regulated and discouraged.</h2></div>
+            <div id="travel">
+                <button id="travelBtn" class="button">Show Travel Information</button>
+                <h2 id="travelInfo" class="hide">Immigration and visitation by foreigners is extremely regulated and discouraged.</h2>
+                <br>
+            </div>
         </header>
         <div id="content">
             <div id="covidBox">
@@ -58,7 +62,5 @@
             <i>NOTICE: This website serves as a resource for COVID-19 and related information. Last updated 3/8/2021.</i>
         </footer>
     </div>
-    <!--<script src="./vendor/jquery-3.5.1.min.js"></script>-->
-    <!--<script src="./vendor/jquery-ui/jquery-ui.min.js"></script>-->
 </body>
 </html>
