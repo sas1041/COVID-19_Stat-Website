@@ -125,7 +125,7 @@ function age() {
     }
     else if (age > 18 || age <= 39)
     {
-        retrun 2;
+        return 2;
     }
     else if (age > 39 || age <= 65)
     {
