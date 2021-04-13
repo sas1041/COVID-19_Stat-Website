@@ -118,7 +118,7 @@ function showTravel() {
 
 // The Older the User, the Higher Risk They are at to COVID
 function age() {
-    document.getElementById("age");
+    var age = parseInt(document.getElementById("age"));
     if (age <= 18)
     {
         return 0.5;
@@ -135,12 +135,16 @@ function age() {
     {
         return 3;
     }
+    else
+    {
+        return 0;
+    }
 };
 
 function bmi() {
-    document.getElementById("weight");
-    document.getElementById("height");
-    var bmi = (weight/heightMath.pow(2)) * 703;
+    var height = parseInt(document.getElementById("weight"));
+    var weight = parseInt(document.getElementById("height"));
+    var bmi = (weight/height * height) * 703;
     if (bmi > 30)
     {
         return 3;
@@ -149,12 +153,20 @@ function bmi() {
     {
         return 2;
     }
+    else
+    {
+        return 0;
+    }
 };
 
 function symptoms() {
     if(document.getElementById("symptomYes").checked)
     {
         return 2;
+    }
+    else
+    {
+        return 0;
     }
 };
 
@@ -163,12 +175,20 @@ function contact() {
     {
         return 5;
     }
+    else
+    {
+        return 0;
+    }
 };
 
 function travel() {
     if(document.getElementById("outsideYes").checked)
     {
         return 1;
+    }
+    else
+    {
+        return 0;
     }
 };
 
