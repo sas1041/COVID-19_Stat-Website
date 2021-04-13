@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./vendor/jquery-ui/jquery-ui.min.css">
     <link rel="icon" type="image/gif" href="images/favicon.gif"/>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <src script ="js/calc.js"></src>
 </head>
 <body>
     <div id="wrapper">
@@ -34,11 +35,11 @@
             <form id="calc">
                 <div class="formGroup">
                     <label for="age">What is your age?</label>
-                    <input type="number" name="age" placeholder="Years" required>
+                    <input type="number" name="age" placeholder="Years" id ="age" required>
                 </div>
                 <div class="formGroup">
                     <label for="weight">What is your weight?</label>
-                    <input type="text" name="weight" placeholder="Pounds" required>
+                    <input type="text" name="weight" placeholder="Pounds" id="weight" required>
                 </div>
                 <div class="formGroup">
                     <label for="height">What is your height?</label>
@@ -72,6 +73,7 @@
                     </div>
                 </div>
                 <input id="formButton" type="submit"/>
+                <span id="risk"></span>
                 <h3 id="calcResult"></h3>
             </form>
         </div>
