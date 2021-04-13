@@ -172,7 +172,7 @@ function travel() {
     }
 };
 
-function caclculate() {
+function calculateRisk() {
     var result = document.getElementById("calcResult");
     var risk = travel() + contact() + symptoms() + bmi() + age();
 
