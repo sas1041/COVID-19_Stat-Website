@@ -12,17 +12,14 @@ window.onload = function() {
             states[i].onmouseout = hidePopup;
         }
     }
-
-    if (path == "safety.html") {
+    else if (path == "safety.html") {
         document.getElementById("adviceBtn").onclick = showAdvice;
         document.getElementById("protocolBtn").onclick = showProtocol;
     }
-
-    if (path == "russia.html" || path == "japan.html" || path == "china.html" || path == "uk.html"){
+    else if (path == "russia.html" || path == "japan.html" || path == "china.html" || path == "uk.html"){
         $("travelBtn").onclick = showTravel;
     }
-    
-    if(path == "calc.html"){
+    else if(path == "calc.html"){
         document.getElementById("formButton").onclick = calculateRisk;
     };
 };
@@ -66,6 +63,7 @@ function hidePopup() {
     popup.style.display = "none"
 }
 
+// Toggles safety advice
 function showAdvice() {
     var dots = document.getElementById("dots1");
     var moreText = document.getElementById("more1");
@@ -82,6 +80,7 @@ function showAdvice() {
     }
 }
 
+// Toggles safety protocols
 function showProtocol() {
     var dots = document.getElementById("dots2");
     var moreText = document.getElementById("more2");
@@ -98,6 +97,7 @@ function showProtocol() {
     }
 }
 
+// Shows travel information for countries
 function showTravel() {
     var info = document.getElementById("travelInfo");
 
@@ -118,94 +118,82 @@ function showTravel() {
 
 // The Older the User, the Higher Risk They are at to COVID
 function age() {
-    var age = parseInt(document.getElementById("age"));
-    if (age <= 18)
-    {
+    document.getElementById("age");
+    if (age <= 18) {
         return 0.5;
     }
-    else if (age > 18 || age <= 39)
-    {
+    else if (age > 18 || age <= 39) {
         return 2;
     }
-    else if (age > 39 || age <= 65)
-    {
+    else if (age > 39 || age <= 65) {
         return 2;
     }
-    else if (age > 65)
-    {
+    else if (age > 65) {
         return 3;
     }
     else
-    {
         return 0;
-    }
-};
+}
 
+// Adds 2 or 3, depending on if User is overweight or obese
 function bmi() {
-    var height = parseInt(document.getElementById("weight"));
-    var weight = parseInt(document.getElementById("height"));
-    var bmi = (weight/height * height) * 703;
-    if (bmi > 30)
-    {
-        return 3;
+    var weight = parseInt(document.getElementById("weight"));
+    var height = parseInt(document.getElementById("height"));
+
+    var bmi = ((weight/(height * height)) * 703);
+    if (bmi > 30) {
+        return 3; // obese
     }
-    else if (bmi > 25 && bmi < 29.9)
-    {
-        return 2;
+    else if (bmi > 25 && bmi < 29.9) {
+        return 2; // overweight
     }
     else
-    {
         return 0;
-    }
-};
+}
 
+// Adds 2 to risk if User has Symptoms
 function symptoms() {
-    if(document.getElementById("symptomsYes").checked)
-    {
+    if(document.getElementById("symptomsYes").checked) {
         return 2;
     }
     else
-    {
         return 0;
-    }
-};
+}
 
+// Adds 5 to risk if User has been in contact with someone who's had COVID
 function contact() {
-    if(document.getElementById("contactYes").checked)
-    {
+    if(document.getElementById("contactYes").checked) {
         return 5;
     }
     else
-    {
         return 0;
-    }
-};
+}
 
+// Adds 1 to Risk if User has Traveled
 function travel() {
-    if(document.getElementById("outsideYes").checked)
-    {
+    if(document.getElementById("outsideYes").checked) {
         return 1;
     }
     else
-    {
         return 0;
-    }
-};
+}
 
-function calculateRisk() {
+// Lets User Knows Their Risk
+function calculateRisk(event) {
+    event.preventDefault();
+    var risk = 0;
     var result = document.getElementById("calcResult");
-    var risk = travel() + contact() + symptoms() + bmi() + age();
 
-    if (risk < 5)
-    {
-        result.innerHTML("Based on our calculations, you most likely don't have COVID-19. Still stay cautious with who you come in contact with.");
+    console.log(travel());
+    risk = travel() + contact() + symptoms() + bmi() + age();
+
+    if (risk < 5) {
+        result.innerHTML ="Based on our calculations, you most likely don't have COVID-19. Still stay cautious with who you come in contact with.";
     }
-    else if(risk > 5 && risk < 10)
-    {
-        result.innerHTML("Based on our calculations, you should be careful with who you come in contact with because there's a decent chance you have it.");
+    else if(risk > 5 && risk < 10) {
+        result.innerHTML = "Based on our calculations, you should be careful with who you come in contact with because there's a decent chance you have it.";
     }
-    else if(risk >= 10)
-    {
-        result.innerHTML("Based on our calculations, you are at great risk for having COVID-19. Stay quarantined.");
+    else if(risk >= 10) {
+        result.innerHTML = "Based on our calculations, you are at great risk for having COVID-19. Stay quarantined.";
     }
-};
+}
