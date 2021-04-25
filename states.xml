@@ -1,200 +1,204 @@
 <!-- Update HTML to Reflect Last Date Updated (4/24/21) -->
 
 <states>
-    <alabama>
+    <al>
         <deaths>10,851</deaths>
         <cases>525,898</cases>
-    </alabama>
-    <alaska>
+    </al>
+    <ak>
         <deaths>318</deaths>
         <cases>66,518</cases>
-    </alaska>
-    <arizona>
+    </ak>
+    <az>
         <deaths>17,260</deaths>
         <cases>858,076</cases>
-    </arizona>
-    <arkansas>
+    </az>
+    <ar>
         <deaths>5,717</deaths>
         <cases>334,642</cases>
-    </arkansas>
-    <california>
+    </ar>
+    <ca>
         <deaths>61,399</deaths>
         <cases>3,730,326</cases>
-    </california>
-    <colorado>
+    </ca>
+    <co>
         <deaths>6,381</deaths>
         <cases>502,704</cases>
-    </colorado>
-    <connecticut>
+    </co>
+    <ct>
         <deaths>8,047</deaths>
         <cases>334,766</cases>
-    </connecticut>
-    <delaware>
+    </ct>
+    <de>
         <deaths>1,615</deaths>
         <cases>102,927</cases>
-    </delaware>
-    <florida>
+    </de>
+    <fl>
         <deaths>34,811</deaths>
         <cases>2,203,905</cases>
-    </florida>
-    <georgia>
+    </fl>
+    <ga>
         <deaths>19,355</deaths>
         <cases>1,068,594</cases>
-    </georgia>
-    <hawaii>
+    </ga>
+    <hi>
         <deaths>475</deaths>
         <cases>32,165</cases>
-    </hawaii>
-    <idaho>
+    </hi>
+    <id>
         <deaths>2,033</deaths>
         <cases>186,300</cases>
-    </idaho>
-    <illinois>
+    </id>
+    <il>
         <deaths>24,114</deaths>
         <cases>1,322,640</cases>
-    </illinois>
-    <indiana>
+    </il>
+    <in>
         <deaths>13,271</deaths>
         <cases>717,263</cases>
-    </indiana>
-    <iowa>
+    </in>
+    <ia>
         <deaths>5,927</deaths>
         <cases>362,732</cases>
-    </iowa>
-    <kansas>
+    </ia>
+    <ks>
         <deaths>5,009</deaths>
         <cases>309,544</cases>
-    </kansas>
-    <louisiana>
+    </ks>
+    <ky>
+        <deaths>6,544</deaths>
+        <cases>440,955</cases>
+    </ky>
+    <la>
         <deaths>10,336</deaths>
         <cases>455,541</cases>
-    </louisiana>
-    <maine>
+    </la>
+    <me>
         <deaths>772</deaths>
         <cases>59,612</cases>
-    </maine>
-    <maryland>
+    </me>
+    <md>
         <deaths>8,648</deaths>
         <cases>442,537</cases>
-    </maryland>
-    <massachusetts>
+    </md>
+    <ma>
         <deaths>8,648</deaths>
         <cases>442,537</cases>
-    </massachusetts>
-    <michigan>
+    </ma>
+    <mi>
         <deaths>18,398</deaths>
         <cases>911,090</cases>
-    </michigan>
-    <minnesota>
+    </mi>
+    <mn>
         <deaths>7,150</deaths>
         <cases>566,765</cases>
-    </minnesota>
-    <mississippi>
+    </mn>
+    <ms>
         <deaths>7,175</deaths>
         <cases>310,349</cases>
-    </mississippi>
-    <missouri>
+    </ms>
+    <mo>
         <deaths>9,179</deaths>
         <cases>597,228</cases>
-    </missouri>
-    <montana>
+    </mo>
+    <mt>
         <deaths>1,563</deaths>
         <cases>108,121</cases>
-    </montana>
-    <nebraska>
+    </mt>
+    <ne>
         <deaths>2,358</deaths>
         <cases>218,580</cases>
-    </nebraska>
-    <nevada>
+    </ne>
+    <nv>
         <deaths>5,422</deaths>
         <cases>312,840</cases>
-    </nevada>
-    <newhampshire>
+    </nv>
+    <nh>
         <deaths>1,282</deaths>
         <cases>93,542</cases>
-    </newhampshire>
-    <newjersey>
+    </nh>
+    <nj>
         <deaths>25,367</deaths>
         <cases>996,197</cases>
-    </newjersey>
-    <newmexico>
+    </nj>
+    <nm>
         <deaths>4,026</deaths>
         <cases>196,221</cases>
-    </newmexico>
-    <newyork>
+    </nm>
+    <ny>
         <deaths>51,419</deaths>
         <cases>2,025,257</cases>
-    </newyork>
-    <northcarolina>
+    </ny>
+    <nc>
         <deaths>12,553</deaths>
         <cases>963,886</cases>
-    </northcarolina>
-    <northdakota>
+    </nc>
+    <nd>
         <deaths>1,517</deaths>
         <cases>106,687</cases>
-    </northdakota>
-    <ohio>
+    </nd>
+    <oh>
         <deaths>19,122</deaths>
         <cases>1,063,433</cases>
-    </ohio>
-    <oklahoma>
+    </oh>
+    <ok>
         <deaths>6,716</deaths>
         <cases>446,550</cases>
-    </oklahoma>
-    <oregon>
+    </ok>
+    <or>
         <deaths>2,496</deaths>
         <cases>179,930</cases>
-    </oregon>
-    <pennslyvania>
+    </or>
+    <pa>
         <deaths>26,033</deaths>
         <cases>1,135,903</cases>
-    </pennslyvania>
-    <rhodeisland>
+    </pa>
+    <ri>
         <deaths>2,660</deaths>
         <cases>146,324</cases>
-    </rhodeisland>
-    <southcarolina>
+    </ri>
+    <sc>
         <deaths>9,414</deaths>
         <cases>574,226</cases>
-    </southcarolina>
-    <southdakota>
+    </sc>
+    <sd>
         <deaths>1,958</deaths>
         <cases>121,986</cases>
-    </southdakota>
-    <tennessee>
+    </sd>
+    <tn>
         <deaths>12,045</deaths>
         <cases>826,608</cases>
-    </tennessee>
-    <texas>
+    </tn>
+    <tx>
         <deaths>50,090</deaths>
         <cases>2,872,848</cases>
-    </texas>
-    <utah>
+    </tx>
+    <ut>
         <deaths>2,180</deaths>
         <cases>395,214</cases>
-    </utah>
-    <vermont>
+    </ut>
+    <ut>
         <deaths>244</deaths>
         <cases>22,479</cases>
-    </vermont>
-    <virginia>
+    </ut>
+    <va>
         <deaths>10,675</deaths>
         <cases>653,326</cases>
-    </virginia>
-    <washington>
+    </va>
+    <wa>
         <deaths>5,478</deaths>
         <cases>396,890</cases>
-    </washington>
-    <westvirginia>
+    </wa>
+    <wv>
         <deaths>2,817</deaths>
         <cases>151,068</cases>
-    </westvirginia>
-    <wisconsin>
+    </wv>
+    <wi>
         <deaths>7,474</deaths>
         <cases>656,203</cases>
-    </wisconsin>
-    <wyoming>
+    </wi>
+    <wy>
         <deaths>705</deaths>
         <cases>57,696</cases>
-    </wyoming>
+    </wy>
 </states>

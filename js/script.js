@@ -1,8 +1,6 @@
 // Loads all of the event functions
 window.onload = function() {
-    // Gets name of page file to prevent loading errors
-    var path = window.location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
-
+    var path = window.location.pathname.substring(location.pathname.lastIndexOf("/") + 1); // Gets name of page file to prevent loading errors
     if (path == "index.html") {
         document.getElementById("us-map").onmousemove = setPopup;
 
@@ -36,31 +34,43 @@ function setPopup(e) {
 
 // Shows popup
 function showPopup() {
+    var popup, stateAbbr = "", stateName = "", cases = "", deaths = "";
     var popup = document.getElementById("info-box");
-    var element = document.createElement("div");
+    var stateAbbr = this.className.baseVal; // Gets state abbreviation from path class value
+    var stateName = this.dataset.info; // Gets state's name from path dataset attribute
 
-    var state = document.createElement("h4").appendChild(document.createTextNode(this.dataset.info));
-    element.appendChild(state);
-    element.appendChild(document.createElement("br"));
+    // Loads the states xml file and gets the required cases/deaths for the selected state
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            xmlDoc = this.responseXML;
+            var stateElement = xmlDoc.getElementsByTagName(stateAbbr);
+            cases = stateElement[0].childNodes[3].childNodes[0].nodeValue; // Gets cases value
+            deaths = stateElement[0].childNodes[1].childNodes[0].nodeValue; // Gets death values
+            
+            document.getElementById("covidCases").innerHTML =  cases; // Sets cases value in popup
+            document.getElementById("covidDeaths").innerHTML =  deaths; // Sets death value in popup
+        }
+    };
+    xhttp.open("GET", "states.xml" + '?' + new Date().getTime(), true);
+    xhttp.send();
 
-    var covidCases = document.createElement("h4").appendChild(document.createTextNode("Covid Cases: ..."));
-    element.appendChild(covidCases);
-    element.appendChild(document.createElement("br"))
-
-    var covidDeaths = document.createElement("h4").appendChild(document.createTextNode("Covid Deaths: ..."));
-    element.appendChild(covidDeaths);
-    element.appendChild(document.createElement("br"))
-
-    popup.appendChild(element);
-    popup.style.display = "block"
+    document.getElementById("stateName").innerHTML = stateName; // Sets state name in popup
+    popup.style.display = "block"; // Shows popup
 }
 
 // Hides popup
 function hidePopup() {
     var popup = document.getElementById("info-box");
+    var state = document.getElementById("stateName");
+    var cases = document.getElementById("covidCases");
+    var deaths = document.getElementById("covidDeaths");
 
-    popup.innerHTML = "";
-    popup.style.display = "none"
+    // Empties the fields 
+    state.innerHTML = "";
+    cases.innerHTML = "";
+    deaths.innerHTML = "";
+    popup.style.display = "none"; // Hides popup
 }
 
 // Toggles safety advice
@@ -184,7 +194,6 @@ function calculateRisk(event) {
     var risk = 0;
     var result = document.getElementById("calcResult");
 
-    console.log(travel());
     risk = travel() + contact() + symptoms() + bmi() + age();
 
     if (risk < 5) {
